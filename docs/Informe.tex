@@ -1,0 +1,82 @@
+% Define the document type and font size
+\documentclass[12pt]{article}
+
+\usepackage[spanish]{babel} % Package for the Spanish language
+\usepackage[utf8]{inputenc} % Package for UTF-8 character encoding
+\usepackage{geometry} % Package to configure document margins
+\usepackage{graphicx} % Package to include graphics
+\usepackage{listings} % Package to include source code in the document
+\usepackage{xcolor} % Package to define colors
+\usepackage{fancyhdr} % Package to customize headers and footers
+\usepackage{amsmath} % Package for advanced mathematical symbols and environments
+\usepackage{amssymb} % Package for additional mathematical symbols
+\usepackage[hidelinks]{hyperref} % Package for hyperlinks in index and references (Keep this as the last package loaded)
+
+\setlength{\parskip}{1em} % Space between paragraphs
+\setlength{\parindent}{0.0in} % Indentation for paragraphs
+
+% Definition of colors for source code
+\definecolor{COLOR_COMMENTS}{HTML}{999999}
+\definecolor{COLOR_KEYWORDS}{HTML}{37a5a6}
+\definecolor{COLOR_IDENTIFIERS}{HTML}{ea76cb}
+\definecolor{COLOR_STRINGS}{HTML}{ff7858}
+
+% Configuration of the listings environment to display source code
+\lstset{
+frame=shadowbox,
+aboveskip=3mm,
+belowskip=3mm,
+xleftmargin=10mm,
+xrightmargin=10mm,
+showstringspaces=false,
+columns=flexible,
+basicstyle={\footnotesize\ttfamily},
+numbers=left,
+numberstyle=\tiny\color{COLOR_COMMENTS},
+keywordstyle=\color{COLOR_KEYWORDS},
+stringstyle=\color{COLOR_STRINGS},
+commentstyle=\color{COLOR_COMMENTS},
+breaklines=true,
+breakatwhitespace=true,
+tabsize=4,
+}
+
+% Configuration of document margins
+\geometry{
+    a4paper,
+    left=25mm,
+    right=25mm,
+    top=25mm,
+    bottom=25mm
+}
+\graphicspath{{../img}} % Path for images
+
+\title{Simulación de Distribución de Calor en 2D} % Document title
+\author{María Laura Reina y Victoria Ruza} % Document author
+\date{\today} % Document date
+
+\begin{document}
+
+    \begin{titlepage}
+        \centering
+        {\includegraphics[width=0.2\textwidth]{logoBlack}\par}
+        {\large {Universidad Central de Venezuela}\par}
+        {\large {Facultad de Ciencias}\par}
+        {\large {Escuela de Computación}\par}
+        {\large {Cálculo Científico}\par}
+        \vfill
+        {\Huge {Simulación de Distribución de Calor en 2D}\par}
+        \vfill
+        {\large María Laura Reina y Victoria Ruza\par}
+        \vspace{0.5cm}
+        {\large \today\par}
+    \end{titlepage}
+
+    \pagenumbering{gobble}
+    \tableofcontents
+    \newpage
+    \pagenumbering{arabic}
+
+    \section{}
+
+\end{document}
